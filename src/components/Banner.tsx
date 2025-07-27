@@ -34,7 +34,7 @@ const Banner = ({ post }: BannerProps) => {
       href={`/post/${post.slug}`}
       className="group w-full h-full flex-col sm:flex-row flex gap-4 lg:gap-8 items-center justify-center mt-3 md:mt-5 rounded-2xl shadow-2xl"
     >
-      <div className="flex flex-1 w-full h-full min-h-[240px] md:min-h-[334px] relative rounded-l-2xl overflow-hidden">
+      <div className="flex flex-1 w-full h-full min-h-[240px] md:min-h-[334px] relative rounded-2xl overflow-hidden">
         <Image
           src={post.coverimage.url}
           alt={post.title}

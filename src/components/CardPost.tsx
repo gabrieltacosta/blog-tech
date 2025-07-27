@@ -23,7 +23,7 @@ const CardPost = ({
       href={`/post/${slug}`}
       className="w-full sm:max-w-[352px] h-full flex flex-col items-center gap-2 sm:gap-4 shadow-2xl rounded-2xl group"
     >
-      <div className="flex w-full h-[200px] md:h-[234px] relative rounded-t-2xl overflow-hidden">
+      <div className="flex w-full h-[200px] md:h-[234px] relative rounded-2xl overflow-hidden">
         <Image
           src={urlImage}
           alt={title}
