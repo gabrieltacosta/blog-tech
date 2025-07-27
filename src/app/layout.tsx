@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ApolloWrapper from "@/components/ApolloWrapper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -23,11 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="pt-BR">
+      <body className={`${poppins.className} antialiased`}>
+        <div className="w-full mx-auto flex flex-col max-w-7xl min-h-dvh bg-grey-50 px-4 pb-12 ">
+          <Header />
+          <ApolloWrapper>{children}</ApolloWrapper>
+        </div>
+        <Footer />
       </body>
     </html>
   );
