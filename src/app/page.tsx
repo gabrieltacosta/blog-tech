@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <>
       {posts.length > 0 && <Banner post={posts[0]} />}
-      <div className="flex flex-col w-full md:justify-between items-center sm:grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8 mt-4 lg:mt-12">
+      <div className="flex flex-col w-full mx-auto md:justify-between items-center sm:grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8 mt-4 lg:mt-12">
         {posts.slice(1).map((post) => (
           <CardPost
             key={post.id}
